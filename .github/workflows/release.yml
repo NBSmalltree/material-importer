@@ -23,6 +23,11 @@ jobs:
       - name: Install frontend dependencies
         run: npm install
 
+      - name: Download WebView2 offline installer
+        run: |
+          Invoke-WebRequest -Uri "https://go.microsoft.com/fwlink/p/?LinkId=2124701" -OutFile "src-tauri/webview2-x64.exe"
+        shell: pwsh
+
       - name: Build Tauri app
         run: npm run tauri build
 

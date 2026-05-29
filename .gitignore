@@ -5,6 +5,9 @@ node_modules/
 dist/
 src-tauri/target/
 
+# WebView2 offline installer (downloaded during CI build)
+src-tauri/webview2-x64.exe
+
 # IDE
 .vscode/
 .idea/
